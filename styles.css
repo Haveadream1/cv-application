@@ -14,6 +14,9 @@
     --space-sm: 1rem;
     --space-md: 1.5rem;
     --space-lg: 2rem;
+
+    /* Radius */
+    --radius-xs: 20px;
 }
 
 body {
@@ -27,7 +30,6 @@ aside {
     background-color: aquamarine;
 }
 aside > form {
-    height: 100vh;
     display: grid;
     grid-template-rows: auto;
 }
@@ -52,16 +54,64 @@ aside > form {
 }
 
 main {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    padding: var(--space-md);
     background-color: blueviolet;
 }
+main > h1 { 
+    padding: var(--space-xs);
+}
+.preview-header {
+    height: 220px;
+    
+    border-top-left-radius: var(--radius-xs);
+    border-top-right-radius: var(--radius-xs);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+}
+.cv-preview-img {
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
+}
+#preview-header-heading {
+    position: absolute;
+    bottom: 0;
+    padding: var(--space-sm);
+}
 
-/* ?? Keep the following for this file */
-.cv-container {
+.cv-content-section {
     /* A4 format */
     width: 210mm;
     height: 297mm;
+    display: grid;
+    grid-template-rows: auto;
+    padding: var(--space-sm);
 
-    background-color: beige;
+    background-color: azure;
+}
+.content-heading {
+    background-color: antiquewhite;
+    padding: var(--space-xs);
+}
+.skill-content {
+    padding: var(--space-xs);
+    width: max-content;
+    text-align: center;
+    border-radius: var(--radius-xs);
+
+    background-color: #9285dd;
+}
+
+.bold {
+    font-weight: bold;
+}
+.light {
+    font-weight: lighter;
+    color: gray;
 }
 
 /* .cv-header {
