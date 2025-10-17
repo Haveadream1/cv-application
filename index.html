@@ -9,9 +9,9 @@
     <title>CV-application</title>
   </head>
   <body>
-    <aside>
+    <aside role="complementary">
       <form id="form" action="post" novalidate>
-        <fieldset class="personal-information-fieldset">
+        <fieldset class="form-fieldset">
           <legend>Personal Information</legend>
 
           <div>
@@ -29,11 +29,11 @@
           </div>
           <div>
             <label for="address">Address</label>
-            <input type="text" name="address" id="address" placeholder=" Seoul, Jongno-gu, Sajik-ro-3-gil 23" autocomplete="street-address" aria-label="Address input">
+            <input type="text" name="address" id="address" placeholder="Seoul, Jongno-gu, Sajik-ro-3-gil 23" autocomplete="street-address" aria-label="Address input">
           </div>
         </fieldset>
 
-        <fieldset class="work-experience-fieldset">
+        <fieldset class="form-fieldset">
           <legend>Work experience</legend>
 
           <div>
@@ -60,7 +60,7 @@
           <!-- TODO: Add a button to add a new section of work experience, Do it once everything is finished -->
         </fieldset>
 
-        <fieldset class="education-fieldset">
+        <fieldset class="form-fieldset">
           <legend>Education</legend>
 
           <div>
@@ -77,7 +77,7 @@
           </div>
         </fieldset>
 
-        <fieldset class="skills-fieldset">
+        <fieldset class="form-fieldset">
           <legend>Skills</legend>
 
           <div>
@@ -89,25 +89,48 @@
       </form>
     </aside>
 
-    <main>
+    <main role="main">
       <h1>CV preview</h1>
-      <section class="preview-header">
-        <h2 class="user-name">Your name</h2>
-        <img src="" alt="CV preview">
+      <section class="preview-header" aria-labelledby="preview-header-heading">
+        <h2 id="preview-header-heading">Your name</h2>
+        <!-- <img class="cv-previem-img" src="/public/8488695_3908540.jpg" loading="lazy" width="300" height="300" alt="CV preview of mockup"> -->
+        <img class="cv-preview-img" src="/8488695_3908540.jpg" loading="lazy" alt="CV preview of mockup">
       </section>
 
       <div class="cv-content-section">
-        <div class="personal-information-content"></div>
-        <div class="work-experience-content"></div>
-        <div class="education-content"></div>
-        <div class="skills-content"></div>
+        <div class="personal-information-content">
+          <h3 class="content-heading">Contact</h3>
+          <p class="email-content"><span class="bold">Email: </span>YSeung@naver.com</p>
+          <p class="phone-content"><span class="bold">Phone: </span>+82 XX XXXX YYYY</p>
+          <p class="adress-content"><span class="bold">Address: </span>Seoul, Jongno-gu, Sajik-ro-3-gil 23</p>
+        </div>
+        <div class="work-experience-content">
+          <h3 class="content-heading">Experience</h3>
+          <p class="job-and-company-content">Front-end developer at KT company</p>
+          <p class="start-and-end-date-content light">2025 - Present</p>
+          <p class="job-description-content">In charge of builds the visible, 
+            interactive part of a website or application by using HTML, CSS, 
+            and JavaScript
+          </p>
+        </div>
+        <div class="education-content">
+          <h3 class="content-heading">Education</h3>
+          <p class="degree-and-institution-content">Computer science bachelor, Yeungnam University</p>
+          <p class="graduation-date-content light">February 2022</p>
+        </div>
+        <div class="skills-content">
+          <h3 class="content-heading">Skills</h3>
+          <p class="skill-content">Teamwork</p>
+          <p class="skill-content">Eager to learn</p>
+          <p class="skill-content">Easy to reach</p>
+        </div>
       </div>
       <button type="button">See your finished CV</button>
     </main>
 
 
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script> -->
   </body>
 </html>
 
