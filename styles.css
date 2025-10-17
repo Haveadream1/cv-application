@@ -1,4 +1,3 @@
-/* !! PUT THIS IN THE GENERAL STYLES SHEET */
 *,
 *::before,
 *::after {
@@ -24,6 +23,38 @@ body {
     /* font family*/
 }   
 
+aside {
+    background-color: aquamarine;
+}
+aside > form {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto;
+}
+.form-fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--space-md);
+    /* border: none; */
+}
+.form-fieldset > legend {
+    font-size: larger;
+}
+.form-fieldset > div {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-xs);
+}
+.form-fieldset > div > input, 
+.form-fieldset > div > textarea {
+    padding: var(--space-xs);
+}
+
+main {
+    background-color: blueviolet;
+}
+
 /* ?? Keep the following for this file */
 .cv-container {
     /* A4 format */
@@ -33,7 +64,7 @@ body {
     background-color: beige;
 }
 
-.cv-header {
+/* .cv-header {
     background-color: aqua;
 }
 .personal-details-section {
@@ -44,4 +75,4 @@ body {
 }
 .experience-section {
     background-color: rgb(255, 0, 115);
-}
+} */
