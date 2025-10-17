@@ -5,10 +5,111 @@
     <meta name="description" content="Realise your CV in no time !">
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
     <title>CV-application</title>
   </head>
   <body>
+    <aside>
+      <form id="form" action="post" novalidate>
+        <fieldset class="personal-information-fieldset">
+          <legend>Personal Information</legend>
+
+          <div>
+            <label for="full-name">Full Name *</label>
+            <input type="text" name="fullName" id="full-name" placeholder="Y Seung" autocomplete="name" aria-label="Name input" required>
+            <small>Write your full legal name as it appears on your ID or passport</small> <!--  for errors handling or for help-->
+          </div>
+          <div>
+            <label for="email">Email *</label>
+            <input type="email" name="email" id="email" placeholder="YSeung@naver.com" autocomplete="email" aria-label="Email input" required>
+          </div>
+          <div>
+            <label for="phone">Phone *</label>
+            <input type="number" name="phone" id="phone" pattern='[0-9]{11}' maxlength="11" placeholder="+82 XX XXXX YYYY" autocomplete="tel" aria-label="Phone input" required>
+          </div>
+          <div>
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" placeholder=" Seoul, Jongno-gu, Sajik-ro-3-gil 23" autocomplete="street-address" aria-label="Address input">
+          </div>
+        </fieldset>
+
+        <fieldset class="work-experience-fieldset">
+          <legend>Work experience</legend>
+
+          <div>
+            <label for="job-title">Job title *</label>
+            <input type="text" name="jobTitle" id="job-title" placeholder="Front-end developer" aria-label="Job title input" required>
+          </div>
+          <div>
+            <label for="company-name">Company name *</label>
+            <input type="text" name="companyName" id="company-name" placeholder="KT company" aria-label="Company input" required>
+          </div>
+          <div>
+            <label for="start-date">Start date *</label>
+            <input type="date" name="startDate" id="start-date" aria-label="Start date input" required>
+          </div>
+          <div>
+            <label for="end-date">End date</label>
+            <input type="date" name="endDate" id="end-date" aria-label="End date input">
+            <!-- TODO add end date verfication towards start date -->
+          </div>
+          <div>
+            <label for="job-description">Job description *</label>
+            <textarea name="jobDescription" id="job-description" placeholder="Develop components and ..." aria-label="Job description" required></textarea>
+          </div>
+          <!-- TODO: Add a button to add a new section of work experience, Do it once everything is finished -->
+        </fieldset>
+
+        <fieldset class="education-fieldset">
+          <legend>Education</legend>
+
+          <div>
+            <label for="institution">Institution *</label>
+            <input type="text" name="institution" id="institution" placeholder="Yeungnam University" aria-label="University input" required>
+          </div>
+          <div>
+            <label for="degree">Degree *</label>
+            <input type="text" name="degree" id="degree" placeholder="Computer science bachelor" aria-label="Degree input" required>
+          </div>
+          <div>
+            <label for="graduation-date">Graduation date</label>
+            <input type="date" name="graduationDate" id="graduation-date" aria-label="Graduation date input">
+          </div>
+        </fieldset>
+
+        <fieldset class="skills-fieldset">
+          <legend>Skills</legend>
+
+          <div>
+            <label for="skill">Skill</label>
+            <input type="text" name="skill" id="skill" placeholder="Teamwork" aria-label="Skill input">
+          </div>
+          <!-- TODO: Add a button to add a new section of skill, Do it once everything is finished -->
+        </fieldset>
+      </form>
+    </aside>
+
+    <main>
+      <h1>CV preview</h1>
+      <section class="preview-header">
+        <h2 class="user-name">Your name</h2>
+        <img src="" alt="CV preview">
+      </section>
+
+      <div class="cv-content-section">
+        <div class="personal-information-content"></div>
+        <div class="work-experience-content"></div>
+        <div class="education-content"></div>
+        <div class="skills-content"></div>
+      </div>
+      <button type="button">See your finished CV</button>
+    </main>
+
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
+<!-- Remove HTML template
+Remove Css link -->
