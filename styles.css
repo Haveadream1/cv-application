@@ -8,6 +8,9 @@
 
 :root {
     /* Color */
+    --white: #FBFBFB;
+    --light-grey: #d9d9d961;
+    --dark-blue: #304da8;
 
     /* Spacing */
     --space-xs: 0.5rem;
@@ -27,18 +30,19 @@ body {
 }
 
 aside {
-    background-color: aquamarine;
+    background-color: var(--white);
 }
 aside > form {
     display: grid;
     grid-template-rows: auto;
+    padding: var(--space-md);
 }
 .form-fieldset {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 var(--space-md);
-    /* border: none; */
+    padding-bottom: var(--space-md);
+    border: none;
 }
 .form-fieldset > legend {
     font-size: larger;
@@ -46,7 +50,10 @@ aside > form {
 .form-fieldset > div {
     display: flex;
     flex-direction: column;
-    padding: var(--space-xs);
+    padding: var(--space-xs) 0;
+}
+.form-fieldset > div > label {
+    padding-bottom: var(--space-xs);
 }
 .form-fieldset > div > input, 
 .form-fieldset > div > textarea {
@@ -58,7 +65,7 @@ main {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     padding: var(--space-md);
-    background-color: blueviolet;
+    background-color: var(--light-grey);
 }
 main > h1 { 
     padding: var(--space-xs);
@@ -81,6 +88,7 @@ main > h1 {
 #preview-header-heading {
     position: absolute;
     bottom: 0;
+    color: var(--white);
     padding: var(--space-sm);
 }
 
@@ -92,8 +100,7 @@ main > h1 {
     display: grid;
     grid-template-rows: auto;
     padding: var(--space-sm);
-
-    background-color: azure;
+    background-color: var(--white);
 }
 .content-heading {
     background-color: antiquewhite;
@@ -114,6 +121,9 @@ main > h1 {
 .light {
     font-weight: lighter;
     color: gray;
+}
+.required {
+    color: red;
 }
 
 /* .cv-header {
