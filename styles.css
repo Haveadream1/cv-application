@@ -23,8 +23,8 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: auto 1fr;
-    /* font family*/
-}   
+    font-family: "Arimo", sans-serif;
+}
 
 aside {
     background-color: aquamarine;
@@ -51,6 +51,7 @@ aside > form {
 .form-fieldset > div > input, 
 .form-fieldset > div > textarea {
     padding: var(--space-xs);
+    font-family: "Arimo", sans-serif;
 }
 
 main {
@@ -87,6 +88,7 @@ main > h1 {
     /* A4 format */
     width: 210mm;
     height: 297mm;
+    margin: auto;
     display: grid;
     grid-template-rows: auto;
     padding: var(--space-sm);
