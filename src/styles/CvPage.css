@@ -1,4 +1,5 @@
 /* !! PUT THIS IN THE GENERAL STYLES SHEET */
+/*
 *,
 *::before,
 *::after {
@@ -11,6 +12,7 @@
     /* Color */
 
     /* Spacing */
+    /*
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
@@ -22,11 +24,14 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     /* font family*/
+    /*
 }   
 
 /* ?? Keep the following for this file */
+/*
 .cv-container {
     /* A4 format */
+    /*
     width: 210mm;
     height: 297mm;
 
@@ -44,4 +49,4 @@ body {
 }
 .experience-section {
     background-color: rgb(255, 0, 115);
-}
+} */
