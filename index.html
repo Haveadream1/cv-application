@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin defer>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:ital,
       opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,
-      700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" defer>
+      700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,
+      700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" defer> 
     <link rel="stylesheet" href="styles.css">
     <title>CV-application</title>
   </head>
@@ -19,16 +20,16 @@
           <legend>Personal Information</legend>
 
           <div>
-            <label for="full-name">Full Name *</label>
+            <label for="full-name">Full Name <span class="required">*</span></label>
             <input type="text" name="fullName" id="full-name" placeholder="Y Seung" autocomplete="name" aria-label="Name input" required>
             <small>Write your full legal name as it appears on your ID or passport</small> <!--  for errors handling or for help-->
           </div>
           <div>
-            <label for="email">Email *</label>
+            <label for="email">Email <span class="required">*</span></label>
             <input type="email" name="email" id="email" placeholder="YSeung@naver.com" autocomplete="email" aria-label="Email input" required>
           </div>
           <div>
-            <label for="phone">Phone *</label>
+            <label for="phone">Phone <span class="required">*</span></label>
             <input type="number" name="phone" id="phone" pattern='[0-9]{11}' maxlength="11" placeholder="+82 XX XXXX YYYY" autocomplete="tel" aria-label="Phone input" required>
           </div>
           <div>
@@ -41,15 +42,15 @@
           <legend>Work experience</legend>
 
           <div>
-            <label for="job-title">Job title *</label>
+            <label for="job-title">Job title <span class="required">*</span></label>
             <input type="text" name="jobTitle" id="job-title" placeholder="Front-end developer" aria-label="Job title input" required>
           </div>
           <div>
-            <label for="company-name">Company name *</label>
+            <label for="company-name">Company name <span class="required">*</span></label>
             <input type="text" name="companyName" id="company-name" placeholder="KT company" aria-label="Company input" required>
           </div>
           <div>
-            <label for="start-date">Start date *</label>
+            <label for="start-date">Start date <span class="required">*</span></label>
             <input type="date" name="startDate" id="start-date" aria-label="Start date input" required>
           </div>
           <div>
@@ -58,7 +59,7 @@
             <!-- TODO add end date verfication towards start date -->
           </div>
           <div>
-            <label for="job-description">Job description *</label>
+            <label for="job-description">Job description <span class="required">*</span></label>
             <textarea name="jobDescription" id="job-description" placeholder="Develop components and ..." aria-label="Job description" required></textarea>
           </div>
           <!-- TODO: Add a button to add a new section of work experience, Do it once everything is finished -->
@@ -68,11 +69,11 @@
           <legend>Education</legend>
 
           <div>
-            <label for="institution">Institution *</label>
+            <label for="institution">Institution <span class="required">*</span></label>
             <input type="text" name="institution" id="institution" placeholder="Yeungnam University" aria-label="University input" required>
           </div>
           <div>
-            <label for="degree">Degree *</label>
+            <label for="degree">Degree <span class="required">*</span></label>
             <input type="text" name="degree" id="degree" placeholder="Computer science bachelor" aria-label="Degree input" required>
           </div>
           <div>
@@ -93,6 +94,8 @@
       </form>
     </aside>
 
+    <!-- TODO : remove class not used after finished with react -->
+
     <main role="main">
       <h1>CV preview</h1>
       <section class="preview-header" aria-labelledby="preview-header-heading">
@@ -104,32 +107,43 @@
       <div class="cv-content-section">
         <div class="personal-information-content">
           <h3 class="content-heading">Contact</h3>
-          <p class="email-content"><span class="bold">Email: </span>YSeung@naver.com</p>
-          <p class="phone-content"><span class="bold">Phone: </span>+82 XX XXXX YYYY</p>
-          <p class="adress-content"><span class="bold">Address: </span>Seoul, Jongno-gu, Sajik-ro-3-gil 23</p>
+          <div class="content-style">
+            <p class="email-content"><span class="bold">Email: </span>YSeung@naver.com</p>
+            <p class="phone-content"><span class="bold">Phone: </span>+82 XX XXXX YYYY</p>
+            <p class="adress-content"><span class="bold">Address: </span>Seoul, Jongno-gu, Sajik-ro-3-gil 23</p>
+          </div>
         </div>
+
         <div class="work-experience-content">
           <h3 class="content-heading">Experience</h3>
-          <p class="job-and-company-content">Front-end developer at KT company</p>
-          <p class="start-and-end-date-content light">2025 - Present</p>
-          <p class="job-description-content">In charge of builds the visible, 
-            interactive part of a website or application by using HTML, CSS, 
-            and JavaScript
-          </p>
+          <div class="content-style">
+            <p class="job-and-company-content">Front-end developer at KT company</p>
+            <p class="start-and-end-date-content light">2025 - Present</p>
+            <p class="job-description-content">In charge of building the visible, 
+              interactive part of a website or application by using HTML, CSS, 
+              and JavaScript
+            </p>
+          </div>
         </div>
+
         <div class="education-content">
           <h3 class="content-heading">Education</h3>
-          <p class="degree-and-institution-content">Computer science bachelor, Yeungnam University</p>
-          <p class="graduation-date-content light">February 2022</p>
+          <div class="content-style">
+            <p class="degree-and-institution-content">Computer science bachelor, Yeungnam University</p>
+            <p class="graduation-date-content light">February 2022</p>
+          </div>
         </div>
+
         <div class="skills-content">
           <h3 class="content-heading">Skills</h3>
-          <p class="skill-content">Teamwork</p>
-          <p class="skill-content">Eager to learn</p>
-          <p class="skill-content">Easy to reach</p>
+          <div class="content-skill-style">
+            <p class="skill-content">Teamwork</p>
+            <p class="skill-content">Eager to learn</p>
+            <p class="skill-content">Easy to reach</p>
+          </div>
         </div>
       </div>
-      <button type="button">See your finished CV</button>
+      <button type="button" class="download-cv-button">See your finished CV</button>
     </main>
 
 
