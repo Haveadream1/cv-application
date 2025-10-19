@@ -1,3 +1,29 @@
+Create a a form components
+    * Personal details
+    * Education
+    * Experiences
+Create a component for the CV preview
+    * A4 format
+    * result of the form
+
+In source, src
+* components (folder)
+    * containing the jsx elements
+* containers (folder)
+    * containing all the stateful logic
+
+* For each components use style module
+    * AttentionGrabber.module.css
+    * import styles from './styles/Home.module.css'
+    * <div className={styles.div}>
+
+## TODO:
+* improve aside form
+    * present it with button to show form
+* improve CV preview
+    * only display all inputs at first then redirect with a button to the cv preview
+    * this new page will show the cv properly, no form on the side, only cv and a button to save to pdf and print
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
