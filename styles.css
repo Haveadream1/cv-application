@@ -8,9 +8,12 @@
 
 :root {
     /* Color */
+    --red: #b10000;
     --white: #FBFBFB;
     --light-grey: #d9d9d961;
     --dark-blue: #304da8;
+    --light-blue: #0000e0;
+    --transparent-blue: #99b2ff7d;
 
     /* Spacing */
     --space-xs: 0.5rem;
@@ -103,16 +106,31 @@ main > h1 {
     background-color: var(--white);
 }
 .content-heading {
-    background-color: antiquewhite;
+    color: var(--dark-blue);
     padding: var(--space-xs);
+}
+.content-style {
+    border-left: 4px solid var(--dark-blue);
+    padding: var(--space-xs);
+}
+.content-skill-style {
+    display: flex;
+    gap: var(--space-xs);
 }
 .skill-content {
     padding: var(--space-xs);
     width: max-content;
     text-align: center;
     border-radius: var(--radius-xs);
-
-    background-color: #9285dd;
+    color: var(--light-blue);
+    background-color: var(--transparent-blue);
+}
+.download-cv-button {
+    padding: var(--space-sm);
+    margin: auto;
+    color: var(--white);
+    background: var(--dark-blue);
+    border: 1px solid white;
 }
 
 .bold {
@@ -120,10 +138,10 @@ main > h1 {
 }
 .light {
     font-weight: lighter;
-    color: gray;
+    color: var(--light-blue);
 }
 .required {
-    color: red;
+    color: var(--red);
 }
 
 /* .cv-header {
