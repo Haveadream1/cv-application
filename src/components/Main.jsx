@@ -6,7 +6,11 @@ export default function Main({children}) {
                 <h2 id="preview-header-heading">Your name</h2>
                 <img className="cv-preview-img" src="/8488695_3908540.jpg" loading="lazy" alt="CV preview of mockup" />
             </section>
-            {children}
+
+            <div className="cv-content-section">
+                {children}
+            </div>
+
             <button type="button" className="download-cv-button">See your finished CV</button>
         </main>
     );
