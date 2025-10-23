@@ -1,3 +1,6 @@
+import Fieldset from "../Fieldset";
+import Div from "../FieldsetDiv";
+
 export default function EducationFieldset() {
     return (
         <Fieldset
