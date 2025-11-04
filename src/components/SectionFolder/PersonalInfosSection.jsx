@@ -1,7 +1,7 @@
 import Section from "../Section";
 import Text from "../Text";
 
-export default function PersonalInfosSection() {
+export default function PersonalInfosSection({ formData }) {
     return (
         <Section
             sectionClass="personal-information-content"
@@ -11,21 +11,21 @@ export default function PersonalInfosSection() {
             <Text
                 textClass="email-content"
                 spanContent="Email:"
-                textContent="YSeung@naver.com"
+                textContent={formData.personalInfo.email}
             >
             </Text>
     
             <Text
                 textClass="phone-content"
                 spanContent="Phone:"
-                textContent="+82 XX XXXX YYYY"
+                textContent={formData.personalInfo.phone}
             >
             </Text>
     
             <Text
                 textClass="address-content"
                 spanContent="Address:"
-                textContent="Seoul, Jongno-gu, Sajik-ro-3-gil 23"
+                textContent={formData.personalInfo.address}
             >
             </Text>
         </Section>

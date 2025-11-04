@@ -1,7 +1,7 @@
 import Section from "../Section";
 import Text from "../Text";
 
-export default function ExperienceSection() {
+export default function ExperienceSection({ formData }) {
     return (
         <Section
             sectionClass="work-experience-content"
@@ -10,21 +10,19 @@ export default function ExperienceSection() {
         >
             <Text
                 textClass="job-and-company-content"
-                textContent="Front-end developer at KT company"
+                textContent={formData.experience.jobTitle}
             >
             </Text>
     
             <Text
                 textClass="start-and-end-date-content light"
-                textContent="2025 - Present"
+                textContent={formData.experience.startDate} // Handle concat
             >
             </Text>
     
             <Text
                 textClass="job-description-content"
-                textContent="In charge of building the visible, 
-                interactive part of a website or application by using HTML, CSS, 
-                and JavaScript"
+                textContent={formData.experience.jobDescription}
             >
             </Text>
         </Section>

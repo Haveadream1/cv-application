@@ -1,7 +1,7 @@
 import Section from "../Section";
 import Text from "../Text";
 
-export default function EducationSection() {
+export default function EducationSection({ formData }) {
     return (
         <Section
             sectionClass="education-content"
@@ -10,13 +10,13 @@ export default function EducationSection() {
         >
             <Text
                 textClass="degree-and-institution-content"
-                textContent="Computer science bachelor, Yeungnam University"
+                textContent={formData.education.institution}
             >
             </Text>
     
             <Text
                 textClass="graduation-date-content light"
-                textContent="February 2022"
+                textContent={formData.education.graduationDate}
             >
             </Text>
         </Section>

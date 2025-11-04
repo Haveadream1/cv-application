@@ -1,7 +1,7 @@
 import Section from "../Section";
 import Text from "../Text";
 
-export default function SkillsSection() {
+export default function SkillsSection({ formData }) {
     return (
         <Section
             sectionClass="skills-content"
@@ -11,21 +11,21 @@ export default function SkillsSection() {
         >
             <Text
                 textClass="skill-content"
-                textContent="Teamwork"
+                textContent={formData.skills.skill}
             >
             </Text>
     
-            <Text
+            {/* <Text
                 textClass="skill-content"
-                textContent="Eager to learn"
+                textContent={formData.skills.skill}
             >
     
             </Text>
             <Text
                 textClass="skill-content"
-                textContent="Easy to reach"
+                textContent={formData.skills.skill}
             >
-            </Text>
+            </Text> */}
         </Section>
     );
 }
