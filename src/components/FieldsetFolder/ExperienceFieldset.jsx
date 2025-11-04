@@ -1,7 +1,11 @@
 import Fieldset from "../Fieldset";
 import Div from "../FieldsetDiv";
 
-export default function ExperienceFieldset() {
+export default function ExperienceFieldset({ formData, onDataChange}) {
+    const handleFieldsetChange = (fieldName, value) => {
+        onDataChange("experience", fieldName, value);
+    }
+
     return (
         <Fieldset
             ariaLabelledby="work-experience-legend"
@@ -15,6 +19,8 @@ export default function ExperienceFieldset() {
                 name="jobTitle"
                 placeholder="Front-end developer"
                 ariaLabel="Job title input"
+                formData={formData.experience.jobTitle}
+                onDataChange={handleFieldsetChange}
             />
             <Div 
                 id="company-name"
@@ -24,6 +30,8 @@ export default function ExperienceFieldset() {
                 name="companyName"
                 placeholder="KT company"
                 ariaLabel="Job title input"
+                formData={formData.experience.companyName}
+                onDataChange={handleFieldsetChange}
             />
             <Div 
                 id="start-date"
@@ -33,6 +41,8 @@ export default function ExperienceFieldset() {
                 type="date"
                 name="startDate"
                 ariaLabel="Start date input"
+                formData={formData.experience.startDate}
+                onDataChange={handleFieldsetChange}
             />
             <Div 
                 id="end-date"
@@ -42,6 +52,8 @@ export default function ExperienceFieldset() {
                 type="date"
                 name="endDate"
                 ariaLabel="End date input"
+                formData={formData.experience.endDate}
+                onDataChange={handleFieldsetChange}
             />
             <Div 
                 id="job-description"
@@ -51,6 +63,8 @@ export default function ExperienceFieldset() {
                 name="jobDescription"
                 placeholder="Develop components and ..."
                 ariaLabel="Job description"
+                formData={formData.experience.jobDescription}
+                onDataChange={handleFieldsetChange}
             />
         </Fieldset>
     );

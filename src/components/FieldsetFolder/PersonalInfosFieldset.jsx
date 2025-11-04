@@ -1,7 +1,11 @@
 import Fieldset from "../Fieldset";
 import Div from "../FieldsetDiv";
 
-export default function PersonalInfosFieldset() {
+export default function PersonalInfosFieldset({ formData, onDataChange }) {
+    const handleFieldsetChange = (fieldName, value) => {
+        onDataChange("personalInfo", fieldName, value);
+    }
+
     return (
         <Fieldset
             ariaLabelledby="personal-information-legend"
@@ -17,6 +21,8 @@ export default function PersonalInfosFieldset() {
             autoComplete="name" 
             ariaLabel="Name input"
             small="Write your full legal name as it appears on your ID or passport"
+            formData={formData.personalInfo.fullName}
+            onDataChange={handleFieldsetChange}
             />
             <Div 
             id="email"
@@ -27,6 +33,8 @@ export default function PersonalInfosFieldset() {
             placeholder="YSeung@naver.com"
             autoComplete="email" 
             ariaLabel="Email input"
+            formData={formData.personalInfo.email}
+            onDataChange={handleFieldsetChange}
             />
             <Div 
             id="phone"
@@ -39,6 +47,8 @@ export default function PersonalInfosFieldset() {
             placeholder="+82 XX XXXX YYYY"
             autoComplete="tel"
             ariaLabel="Phone input"
+            formData={formData.personalInfo.phone}
+            onDataChange={handleFieldsetChange}
             />
             <Div 
             id="address"
@@ -49,6 +59,8 @@ export default function PersonalInfosFieldset() {
             placeholder="Seoul, Jongno-gu, Sajik-ro-3-gil 23"
             autoComplete="street-address" 
             ariaLabel="Address input"
+            formData={formData.personalInfo.address}
+            onDataChange={handleFieldsetChange}
             />
         </Fieldset>
     );
