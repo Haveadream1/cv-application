@@ -10,13 +10,13 @@ export default function ExperienceSection({ formData }) {
         >
             <Text
                 textClass="job-and-company-content"
-                textContent={formData.experience.jobTitle}
+                textContent={`${formData.experience.jobTitle} at ${formData.experience.companyName}`}
             >
             </Text>
     
             <Text
                 textClass="start-and-end-date-content light"
-                textContent={formData.experience.startDate} // Handle concat
+                textContent={`${formData.experience.startDate} - ${formData.experience.endDate}`}
             >
             </Text>
     

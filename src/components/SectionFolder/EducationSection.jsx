@@ -10,7 +10,7 @@ export default function EducationSection({ formData }) {
         >
             <Text
                 textClass="degree-and-institution-content"
-                textContent={formData.education.institution}
+                textContent={`${formData.education.degree}, ${formData.education.institution}`}
             >
             </Text>
     
