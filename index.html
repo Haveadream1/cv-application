@@ -14,7 +14,20 @@
     <title>CV-application</title>
   </head>
   <body>
-    <aside role="complementary" aria-label="Form to provide information for the curriculum vitae">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+<!-- Remove HTML template
+Remove Css link -->
+<!-- TODO add end date verfication towards start date -->
+<!-- TODO: Add a button to add a new section of work experience, Do it once everything is finished -->
+<!-- TODO: Add a button to add a new section of skill, Do it once everything is finished -->
+<!-- TODO : remove class not used after finished with react -->
+<!--  for errors handling or for help-->
+
+    <!-- <aside role="complementary" aria-label="Form to provide information for the curriculum vitae">
       <form id="form" action="post" novalidate>
         <fieldset class="form-fieldset" aria-labelledby="personal-information-legend">
           <legend id="personal-information-legend">Personal Information</legend>
@@ -22,7 +35,7 @@
           <div>
             <label for="full-name">Full Name <span class="required">*</span></label>
             <input type="text" name="fullName" id="full-name" placeholder="Y Seung" autocomplete="name" aria-label="Name input" required>
-            <small>Write your full legal name as it appears on your ID or passport</small> <!--  for errors handling or for help-->
+            <small>Write your full legal name as it appears on your ID or passport</small>
           </div>
           <div>
             <label for="email">Email <span class="required">*</span></label>
@@ -56,13 +69,11 @@
           <div>
             <label for="end-date">End date</label>
             <input type="date" name="endDate" id="end-date" aria-label="End date input">
-            <!-- TODO add end date verfication towards start date -->
           </div>
           <div>
             <label for="job-description">Job description <span class="required">*</span></label>
             <textarea name="jobDescription" id="job-description" placeholder="Develop components and ..." aria-label="Job description" required></textarea>
           </div>
-          <!-- TODO: Add a button to add a new section of work experience, Do it once everything is finished -->
         </fieldset>
 
         <fieldset class="form-fieldset" aria-labelledby="education-legend">
@@ -89,12 +100,9 @@
             <label for="skill">Skill</label>
             <input type="text" name="skill" id="skill" placeholder="Teamwork" aria-label="Skill input">
           </div>
-          <!-- TODO: Add a button to add a new section of skill, Do it once everything is finished -->
         </fieldset>
       </form>
     </aside>
-
-    <!-- TODO : remove class not used after finished with react -->
 
     <main role="main">
       <h1>CV preview</h1>
@@ -143,13 +151,4 @@
         </section>
       </div>
       <button type="button" class="download-cv-button">See your finished CV</button>
-    </main>
-
-
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
-
-<!-- Remove HTML template
-Remove Css link -->
+    </main> -->
