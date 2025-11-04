@@ -9,8 +9,8 @@ export default function PreviewContainer({ formData }) {
         <Main>
             <PersonalInfosSection formData={formData} />
             <ExperienceSection formData={formData} />
-            <EducationSection  formData={formData} />
-            <SkillsSection  formData={formData} />
+            <EducationSection formData={formData} />
+            <SkillsSection formData={formData} />
         </Main>
     );
 }
