@@ -4,13 +4,13 @@ import ExperienceFieldset from "../components/FieldsetFolder/ExperienceFieldset"
 import EducationFieldset from "../components/FieldsetFolder/EducationFieldset";
 import SkillsFieldset from "../components/FieldsetFolder/SkillsFieldset";
 
-export default function FormContainer() {
+export default function FormContainer({ formData, onDataChange }) {
     return (
         <Form>
-            <PersonalInfosFieldset />
-            <ExperienceFieldset />
-            <EducationFieldset />
-            <SkillsFieldset />
+            <PersonalInfosFieldset formData={formData} onDataChange={onDataChange} />
+            <ExperienceFieldset formData={formData} onDataChange={onDataChange} />
+            <EducationFieldset formData={formData} onDataChange={onDataChange} />
+            <SkillsFieldset formData={formData} onDataChange={onDataChange} />
         </Form>
     );
 }

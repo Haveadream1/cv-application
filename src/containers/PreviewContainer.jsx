@@ -4,13 +4,13 @@ import ExperienceSection from "../components/SectionFolder/ExperienceSection";
 import PersonalInfosSection from "../components/SectionFolder/PersonalInfosSection";
 import SkillsSection from "../components/SectionFolder/SkillsSection";
 
-export default function PreviewContainer() {
+export default function PreviewContainer({ formData }) {
     return (
         <Main>
-            <PersonalInfosSection />
-            <ExperienceSection />
-            <EducationSection />
-            <SkillsSection />
+            <PersonalInfosSection formData={formData} />
+            <ExperienceSection formData={formData} />
+            <EducationSection  formData={formData} />
+            <SkillsSection  formData={formData} />
         </Main>
     );
 }
