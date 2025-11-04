@@ -17,6 +17,47 @@ In source, src
     * import styles from './styles/Home.module.css'
     * <div className={styles.div}>
 
+## Steps
+1. Write HTML / CSS 
+2. Translate this into 'dumb' components
+3. Create containers for each components
+4. Add module css for each components
+5. Integrate into app.js
+6. Add state and interactivity -> 'smart' containers
+7. Implement data if needed
+8. Review and refactor
+
+### Components, containers
+* [Main handler]
+    * App
+* [Containers]
+    * FormContainer
+    * PreviewContainer
+* [Components]
+    * [FieldsetFolder]
+        * EducationFieldset
+        * ExperienceFieldset
+        * PersonalInfosFieldset
+        * SkillsFieldset
+    * [SectionFolder]
+        * EducationSection
+        * ExperienceSection
+        * PersonalInfosSection
+        * SkillsSection
+    * Main
+    * Text
+    * Form
+    * Section
+    * Fieldset
+    * FieldsetDiv
+        * Legend
+        * div
+        * label
+        * input
+        * small
+        * textArea
+
+
 ## TODO:
 * improve aside form
     * present it with button to show form
