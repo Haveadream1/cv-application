@@ -1,0 +1,31 @@
+aside {
+    background-color: var(--white);
+}
+aside > form {
+    display: grid;
+    grid-template-rows: auto;
+    padding: var(--space-md);
+}
+.form-fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: var(--space-md);
+    border: none;
+}
+.form-fieldset > legend {
+    font-size: larger;
+}
+.form-fieldset > div {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-xs) 0;
+}
+.form-fieldset > div > label {
+    padding-bottom: var(--space-xs);
+}
+.form-fieldset > div > input, 
+.form-fieldset > div > textarea {
+    padding: var(--space-xs);
+    font-family: "Arimo", sans-serif;
+}
