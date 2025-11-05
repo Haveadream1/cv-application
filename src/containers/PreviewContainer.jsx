@@ -6,7 +6,7 @@ import SkillsSection from "../components/SectionFolder/SkillsSection";
 
 export default function PreviewContainer({ formData }) {
     return (
-        <Main>
+        <Main formData={formData}>
             <PersonalInfosSection formData={formData} />
             <ExperienceSection formData={formData} />
             <EducationSection formData={formData} />
