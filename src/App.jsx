@@ -5,15 +5,15 @@ import PreviewContainer from './containers/PreviewContainer.jsx'
 export default function App() {
     const [formData, setFormData] = useState({
         personalInfo : {
-            fullName: "",
+            fullName: "Your name",
             email: "YSeung@naver.com",
             phone: "+82 XX XXXX YYYY",
             address: "Seoul, Jongno-gu, Sajik-ro-3-gil 23",
         },
-        experience : { // Here handle the concat of strings
-            jobTitle: "Front-end developer at KT company",
+        experience : {
+            jobTitle: "Front-end developer",
             companyName: "KT company",
-            startDate: "2025 - Present",
+            startDate: "2025",
             endDate: "Present",
             jobDescription: "In charge of building the visible, interactive part of a website or application by using HTML, CSS, and JavaScript"
         },
