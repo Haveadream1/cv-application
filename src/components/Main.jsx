@@ -11,7 +11,7 @@ export default function Main({children, formData}) {
                 {children}
             </div>
 
-            <button type="button" className="download-cv-button">See your finished CV</button>
+            <button type="button" className="button">See your finished CV</button>
         </main>
     );
 }
