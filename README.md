@@ -64,6 +64,7 @@ In source, src
 * improve CV preview
     * only display all inputs at first then redirect with a button to the cv preview
     * this new page will show the cv properly, no form on the side, only cv and a button to save to pdf and print
+* add input verification
 
 # React + Vite
 
