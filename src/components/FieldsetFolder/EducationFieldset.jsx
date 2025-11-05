@@ -39,7 +39,7 @@ export default function EducationFieldset({ formData, onDataChange }) {
                 required={false}
                 isTextAreaDisplay={false}
                 name="graduationDate"
-                type="date"
+                type="month"
                 ariaLabel="Graduation date input"
                 formData={formData.education.graduationDate}
                 onDataChange={handleFieldsetChange}

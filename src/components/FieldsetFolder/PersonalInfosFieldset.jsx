@@ -20,7 +20,7 @@ export default function PersonalInfosFieldset({ formData, onDataChange }) {
             placeholder="Y Seung"
             autoComplete="name" 
             ariaLabel="Name input"
-            small="Write your full legal name as it appears on your ID or passport"
+            small="Write your full legal name as it appears on your ID"
             formData={formData.personalInfo.fullName}
             onDataChange={handleFieldsetChange}
             />
@@ -65,5 +65,3 @@ export default function PersonalInfosFieldset({ formData, onDataChange }) {
         </Fieldset>
     );
 }
-
-{/* No need for submit button, change on input*/}

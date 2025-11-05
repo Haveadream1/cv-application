@@ -17,7 +17,7 @@ export default function  SkillsFieldset({ formData, onDataChange }) {
                 required={false}
                 isTextAreaDisplay={false}
                 name="skill"
-                placeholder="Teamwork"
+                placeholder="Eager to learn"
                 ariaLabel="Skill input"
                 formData={formData.skills.skill}
                 onDataChange={handleFieldsetChange}
