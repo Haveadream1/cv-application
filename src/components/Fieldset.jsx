@@ -1,5 +1,3 @@
-import '../styles/CvPage.css'
-
 export default function Fieldset({ariaLabelledby, legendText, children}) {
     return (
         <fieldset className='form-fieldset' aria-labelledby={ariaLabelledby}>
@@ -8,7 +6,7 @@ export default function Fieldset({ariaLabelledby, legendText, children}) {
         </fieldset> 
     );
 }
-{/* Wrap content instead of controlling it */}
+{/* Wrap content as {children} instead of controlling it */}
 
 // Fieldset.defaultProps = {
 //     ariaLabelledby: "legend",
